@@ -18,7 +18,7 @@ Understanding of scoping is key to *R Programming Assignment 2*, because the fac
 
 A cache is a way to [store objects in memory to accelerate subsequent access](https://en.wikipedia.org/wiki/Cache_(computing)) to the same object. In statistics, some matrix algebra computations are notoriously expensive, such as calculating the inverse of a matrix. Therefore, if one needs to use the same inverted matrix for subsequent computations, it is advantageous to cache it in memory instead of repeatedly calculating the inverse. Programming Assignment 2 uses the scenario of needing to cache an inverted matrix as a way of illustrating how this might be done with a special matrix object that stores its inverse as an in-memory object. 
 
-The assignment uses an example of caching a mean to illustrate the underlying concepts of scoping and creating an S3 object, as I discuss in [R Objects, S Objects, and Lexical Scoping]](http://bit.ly/2dtOSXi). 
+The assignment uses an example of caching a mean to illustrate the underlying concepts of scoping and creating an S3 object, as I discuss in [R Objects, S Objects, and Lexical Scoping](http://bit.ly/2dtOSXi). 
 
 ## Overall Design of makeVector() and cachemean()
 
@@ -191,7 +191,12 @@ To summarize, the lexical scoping assignment in *R Programming* takes advantage 
 
 For additional commentary that explains how the assignment uses features of the S3 object system, please review [makeCacheMatrix() as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md).
 
-## Appendix A: cachemean.R
+## Appendix A: What's the Point of this Assignment? 
+
+Once students get through the assignment, they frequently ask questions about its value and purpose. A good article explaining the value of lexical scoping in statistical computing is [Lexical Scoping and Statistical Computing](http://bit.ly/2cmqAPy), written by Robert Gentleman and Ross Ihaka at the University of Auckland. 
+
+
+## Appendix B: cachemean.R
 
 Here is the entire listing for cachemean.R.
 
@@ -221,7 +226,7 @@ Here is the entire listing for cachemean.R.
     }
 
 
-## Appendix B: Frequently Asked Questions
+## Appendix C: Frequently Asked Questions
 
 ### Q: Why doesn't `cachemean()` return the cached value? My code looks like:
 
